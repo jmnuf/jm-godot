@@ -1,4 +1,4 @@
-# JM Tools
+# JM Godot Tools & Stuff
 
 DISCLAIMER: This has been done and will be worked on as a side project, have a good one!
 

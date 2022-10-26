@@ -1,0 +1,94 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "JSerializes",
+"class": "JDataTable",
+"language": "GDScript",
+"path": "res://addons/jm/serialize/Database/DataTable/DataTable.gd"
+}, {
+"base": "JSerializes",
+"class": "JDatabase",
+"language": "GDScript",
+"path": "res://addons/jm/serialize/Database/Database.gd"
+}, {
+"base": "Reference",
+"class": "JDeserializer",
+"language": "GDScript",
+"path": "res://addons/jm/serialize/Serializes/Deserializer.gd"
+}, {
+"base": "GDScript",
+"class": "JGDScript",
+"language": "GDScript",
+"path": "res://addons/jm/dynamics/Script.gd"
+}, {
+"base": "Object",
+"class": "JM_Serializables",
+"language": "GDScript",
+"path": "res://jm/Serializables/Serialize.gd"
+}, {
+"base": "Reference",
+"class": "JSerializes",
+"language": "GDScript",
+"path": "res://addons/jm/serialize/Serializes/Serializes.gd"
+}, {
+"base": "JSerializes",
+"class": "Person",
+"language": "GDScript",
+"path": "res://example/TestClasses/Person.gd"
+} ]
+_global_script_class_icons={
+"JDataTable": "res://addons/jm/serialize/Database/DataTable/database_table.png",
+"JDatabase": "res://addons/jm/serialize/Database/database.png",
+"JDeserializer": "",
+"JGDScript": "",
+"JM_Serializables": "",
+"JSerializes": "",
+"Person": ""
+}
+
+[application]
+
+config/name="JM-Tools"
+run/main_scene="res://example/Example.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+JDH="*res://addons/jm/serialize/DataHandler.gd"
+
+[debug]
+
+gdscript/warnings/unused_variable=false
+gdscript/warnings/shadowed_variable=false
+gdscript/warnings/unused_argument=false
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+gdscript/warnings/standalone_ternary=false
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/jm/serialize/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[jm_settings]
+
+JmDataHandlerSingleton=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
